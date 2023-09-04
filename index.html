@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font family -->
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <title>Website</title>
+
+    <style>
+        :root {
+            --orange-color: #fd390e;
+            --text-color: #454056;
+            --head-color: #1f1b2d;
+            --para-color: #666276;
+            --sub-para-color: #cccccc;
+            --font-family: 'Noto Sans';
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--text-color);
+        }
+
+        .logo_img {
+            width: 10%;
+            margin-left: 8%;
+        }
+
+        .text {
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .home {
+            color: var(--orange-color);
+            font-weight: 550;
+        }
+
+        .home:hover {
+            color: var(--orange-color);
+        }
+
+        .home1 {
+            color: var(--text-color);
+            font-weight: 550;
+        }
+
+        .home1:hover {
+            color: var(--orange-color);
+        }
+
+        .home2 {
+            margin-left: 90px;
+        }
+
+        .home3 {
+            background-color: var(--orange-color);
+            color: rgb(255, 255, 255);
+        }
+
+        button.btn.home3.home.ms-5.border {
+            border-radius: 9px;
+        }
+
+        .home3:hover {
+            color: white;
+            background-color: var(--orange-color);
+            box-shadow: 1px 1px 10px #fd3a0ee5,
+                -250px -250px 14px #ededed;
+        }
+
+        .head {
+            margin-top: 70px;
+            color: var(--head-color);
+            letter-spacing: 2.5px;
+        }
+
+        .para {
+            font-size: 18px;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            color: var(--para-color);
+        }
+
+        .text_para_head {
+            font-size: 15px;
+        }
+
+        .div_hover:hover .icon {
+            background-color: #fd5631;
+            color: white;
+            transition-duration: 1s;
+        }
+
+        .icon {
+            padding: 10px;
+            background-color: #ff2f0025;
+        }
+
+        .card-deck {
+            display: flex;
+        }
+
+        .card_main_div {
+            margin-left: 1%;
+        }
+
+        .card_2_main_div {
+            margin-left: 0%;
+        }
+
+        .card:hover {
+            box-shadow: 9px 9px 18px #c5c5c5,
+                -9px -9px 18px #fbfbfb;
+            transition-duration: 1s;
+            border-radius: 15px;
+        }
+
+        .card_2:hover img {
+            filter: brightness(65%);
+            border-radius: 15px 15px 0 0;
+            transition-duration: 1s;
+        }
+
+        .card:hover .but1 {
+            background-color: var(--orange-color);
+            color: white;
+            transition-duration: 0.2s;
+        }
+
+        .card_head {
+            font-size: 30px;
+            color: #1f1b2d;
+            font-weight: 600;
+        }
+
+        .card_para {
+            font-size: 15px;
+        }
+
+        .card_head_2 {
+            font-size: 15px;
+        }
+
+        .card_para_2 {
+            font-size: 18px;
+        }
+
+        .card_para_3 {
+            font-size: 16px;
+        }
+
+        .head2 {
+            font-size: 30px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            color: #1f1b2dcb;
+        }
+
+        .but2:hover {
+            box-shadow: 9px 9px 18px #c5c5c5,
+                -9px -9px 18px #fbfbfb;
+            color: var(--orange-color);
+        }
+
+        .but3 {
+            box-shadow: 9px 9px 18px #c5c5c5,
+                -9px -9px 18px #fbfbfb;
+            color: var(--orange-color);
+        }
+
+        .head5 {
+            letter-spacing: 0;
+        }
+
+        .para5 {
+            font-size: 22px;
+            letter-spacing: 0;
+        }
+
+        .but4 {
+            background-color: var(--orange-color);
+            color: white;
+        }
+
+        .but4:hover {
+            box-shadow: 9px 9px 18px #c5c5c5,
+                -9px -9px 18px #fbfbfb;
+            color: white;
+        }
+
+        .logo_filter:hover {
+            filter: grayscale(100%);
+            transition-duration: 0.5s;
+        }
+
+        .footer_para:hover {
+            color: var(--orange-color);
+        }
+
+        .footer_design {
+            color: var(--orange-color);
+        }
+
+        @media screen and (max-width:768px) {
+            .logo_img {
+                width: 20%;
+            }
+
+            .home2 {
+                margin-left: 0px;
+            }
+
+            .page {
+                display: none;
+            }
+
+            .vendor {
+                display: none;
+            }
+
+            .but2 {
+                display: none;
+            }
+
+            .div_4 {
+                margin-left: 7%;
+            }
+
+            .card-deck {
+                display: block;
+            }
+
+            .but2 {
+                display: none;
+            }
+
+            .img5 {
+                margin-top: 70px;
+            }
+        }
+
+        @media screen and (max-width:450px) {
+            .logo_img {
+                width: 30%;
+            }
+
+            .home2 {
+                margin-left: 0px;
+            }
+
+            .card-deck {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light mt-3 position-sticky bg-light p-3 sticky-top">
+        <img src="logo-dark.svg" alt="" class="logo_img">
+        <button class="navbar-toggler me-4 border-0" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!-- Demos -->
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn ms-4 text border-0 dropdown-toggle"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-layer-group me-2"></i>Demos
+                    </button>
+                    <li class="border-0 text-secondary mt-2 me-2 ms-3">|
+                    </li>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item">Real Estate Demo</a></li>
+                        <li><a class="dropdown-item">Car Finder Demo</a></li>
+                        <li><a class="dropdown-item">Job Board Demo</a></li>
+                        <li><a class="dropdown-item">City Guide Demo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Home -->
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn ms-3 home border-0 dropdown-toggle"
+                        data-bs-toggle="dropdown" aria-expanded="false">Home
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item">Homepage v.1</a></li>
+                        <li><a class="dropdown-item">Homepage v.2</a></li>
+                    </ul>
+                </div>
+
+                <!-- catalog -->
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn ms-1 home1 border-0 dropdown-toggle"
+                        data-bs-toggle="dropdown" aria-expanded="false">Catalog
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item">Property for Rent</a></li>
+                        <li><a class="dropdown-item"> Property for Sale</a></li>
+                        <li><a class="dropdown-item"> Single Property v.1</a></li>
+                        <li><a class="dropdown-item"> Single Property v.2</a></li>
+                    </ul>
+                </div>
+
+                <!-- catalog -->
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn ms-1 home1 border-0 dropdown-toggle"
+                        data-bs-toggle="dropdown" aria-expanded="false">Account
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item">Personal Info</a></li>
+                        <li><a class="dropdown-item">Password & Security</a></li>
+                        <li><a class="dropdown-item">My Properties</a></li>
+                        <li><a class="dropdown-item">Wishlist</a></li>
+                        <li><a class="dropdown-item">Reviews</a></li>
+                        <li><a class="dropdown-item">Notifications</a></li>
+                        <li><a class="dropdown-item">Sign In</a></li>
+                        <li><a class="dropdown-item">Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <!-- Vendor -->
+                <div class="btn-group vendor" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn ms-1 home1 border-0 dropdown-toggle"
+                        data-bs-toggle="dropdown" aria-expanded="false">Vendor
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item">Add Property </a></li>
+                        <li><a class="dropdown-item">Property Promotion</a></li>
+                        <li><a class="dropdown-item">Vendor Page: Properties</a></li>
+                        <li><a class="dropdown-item">Vendor Page: Reviews</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Pages -->
+                <div class="btn-group page" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn ms-1 me-5 home1 border-0 dropdown-toggle"
+                        data-bs-toggle="dropdown" aria-expanded="false">Pages
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item">About</a></li>
+                        <li><a class="dropdown-item">Blog</a></li>
+                        <li><a class="dropdown-item">Contacts</a></li>
+                        <li><a class="dropdown-item">Help Center</a></li>
+                        <li><a class="dropdown-item">404 Not Found</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row mt-5 w-100 h-100 ms-1">
+            <div class="col-md-5 head">
+                <h1 class="display-4 mt-md-5 fw-bolder">Easy way to find
+                    a perfect property</h1>
+                <p class="para mt-5 fw-400">We provide a complete service for the sale, purchase or rental of real
+                    estate. We have been operating
+                    more than 10 years. Search millions of apartments and houses on Finder.</p>
+            </div>
+            <div class="col-md-7"><img src="hero-image.webp" alt="" class="img1 w-100 h-100"></div>
+        </div>
+    </div>
+
+    <!-- rent -->
+    <div class="container p-0 w-100 mt-5">
+        <div class="row row-cols-2 row-cols-sm-3 text-center row-cols-md-3 row-cols-xl-6 mx-4">
+            <div class="col div_hover my-3 my-md-4 my-xl-5 my-sm-4 border border-3 rounded p-0"><i
+                    class="mt-3 mt-md-5 mt-sm-5 border rounded-pill p-3 fa-solid fa-people-roof icon display-6"></i>
+                <p class="mt-4 text_para_head">Houses</p>
+            </div>
+            <div class="col div_hover my-3 my-md-4 my-xl-5 my-sm-4 border border-3 rounded p-0"><i
+                    class="mt-3 mt-md-5 mt-sm-5 border rounded-pill p-3 px-4 fa-regular fa-building icon display-6"></i>
+                <p class="text-center mt-4 text_para_head">Apartments</p>
+            </div>
+            <div class="col div_hover my-3 my-md-4 my-xl-5 my-sm-4 border border-3 rounded p-0"><i
+                    class="mt-3 mt-md-5 mt-sm-5 border rounded-pill p-3 px-4 py-4 fa-solid fa-landmark-flag icon display-6 px-1"></i>
+                <p class="text-center mt-2 text_para_head">Commercial</p>
+            </div>
+            <div class="col div_hover my-3 my-md-4 my-xl-5 my-sm-4 border border-3 rounded p-0"><i
+                    class="mt-3 mt-md-5 mt-sm-5 border rounded-pill p-4 fa-solid fa-money-bill-trend-up icon display-6"></i>
+                <p class="text-center mt-2 text_para_head">Daily rental</p>
+            </div>
+            <div class="col div_hover my-3 my-md-4 my-xl-5 my-sm-4 border border-3 rounded p-0"><i
+                    class="mt-3 mt-md-5 mt-sm-5 border rounded-pill p-4 fa-solid fa-building-wheat icon display-6"></i>
+                <p class="text-center mt-2 text_para_head">New buildings</p>
+            </div>
+            <div class="col div_hover my-3 my-md-4 my-xl-5 my-sm-4 border border-3 rounded p-0"><i
+                    class="mt-3 mt-md-5 mt-sm-5 border rounded-pill p-4 fa-solid fa-ellipsis icon display-6"></i>
+                <p class="text-center mt-2 text_para_head">More</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card -->
+    <div class="card-deck card_main_div">
+        <div class="card w-xl-50 m-md-5 p-4 border-0 mt-4">
+            <img class="card-img-top" src="buy (1).svg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-center mt-3 card_head">Buy a Property</h5>
+                <p class="card-text text-center mt-3 card_para">Blandit lorem dictum in velit. Et nisi at faucibus
+                    mauris pretium enim. Risus sapien nisi aliquam egestas leo dignissim.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-center mt-4">
+                    <button type="button" class="btn but1 p-2 btn-outline-danger text-center mt-xl-2">Find a
+                        Home</button>
+                </div>
+            </div>
+        </div>
+        <div class="card w-xl-50 m-md-5 p-4 border-0 mt-4">
+            <img class="card-img-top" src="sell (1).svg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-center mt-3 card_head">Sell a Property</h5>
+                <p class="card-text text-center mt-3 card_para">Amet, cras orci justo, tortor nisl aliquet. Enim
+                    tincidunt tellus nunc, nulla arcu posuere quis. Velit turpis orci venenatis.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-center mt-4">
+                    <button type="button" class="btn but1 p-2 btn-outline-danger text-center mt-xl-3">Place an
+                        ad</button>
+                </div>
+            </div>
+        </div>
+        <div class="card w-xl-50 m-md-5 pe-xl-5 p-4 py-4 border-0 mt-4">
+            <img class="card-img-top" src="rent (1).svg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-center mt-3 card_head">Rent a Property</h5>
+                <p class="card-text text-center mt-3 card_para mt-xl-4">Sed sed aliquet sed id purus malesuada congue
+                    viverra.
+                    Habitant quis lacus, volutpat natoque ipsum iaculis cursus.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-center mt-4">
+                    <button type="button" class="btn but1 p-2 btn-outline-danger text-center mt-xl-4">Find a
+                        Rental</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card-2 -->
+    <div class="head2 px-xl-5 mx-xl-5 mx-4">Top offers</div>
+    <div class="card-deck card_2_main_div px-xl-5 mx-xl-4">
+        <div class="card card_2 w--xl-50 m-md-4 mt-4 mx-3">
+            <img class="card-img-top" src="01.webp" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title mb-0 card_head_2">For Sell</h5>
+                <p class="card-text mb-0 card_para_2">3-bed Apartment | 67 sq.m</p>
+                <p class="card-text mt-1 mb-0 card_para_3 mb-xl-4">3811 Ditmars Blvd Astoria, NY 11105</p>
+                <p class="card-text mt-1 card_para_3 fw-bolder text-secondary"><i
+                        class="fa-solid fa-money-bills me-2 mt-3"></i>$1,629</p>
+            </div>
+        </div>
+        <div class="card card_2 w-xl-50 m-md-4 mt-5 mx-3">
+            <img class="card-img-top" src="02.webp" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title mb-0 card_head_2">For Rent</h5>
+                <p class="card-text mb-0 card_para_2">Family Home| 120 sq.m</p>
+                <p class="card-text mt-1 mb-0 card_para_3">1510 Castle Hill Ave Bronx, NY 10462</p>
+                <p class="card-text mt-1 card_para_3 fw-bolder text-secondary"><i
+                        class="fa-solid fa-money-bills me-2 mt-3"></i>$84,000</p>
+            </div>
+        </div>
+        <div class="card card_2 w-xl-50 m-md-4 mt-5 mx-3">
+            <img class="card-img-top" src="03.webp" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title mb-0 card_head_2">For Sell</h5>
+                <p class="card-text mb-0 card_para_2">Greenpoint Rentals | 85 sq.m</p>
+                <p class="card-text mt-1 mb-0 card_para_3">1510 Castle Hill Ave Bronx, NY 10462</p>
+                <p class="card-text mt-1 card_para_3 fw-bolder text-secondary"><i
+                        class="fa-solid fa-money-bills me-2 mt-3"></i>$1,330</p>
+            </div>
+        </div>
+
+        <div class="card card_2 w-xl-50 m-md-4 mt-5 mx-3">
+            <img class="card-img-top" src="04.webp" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title mb-0 card_head_2">For Rent</h5>
+                <p class="card-text mb-0 card_para_2">Studio | 32 sq.m</p>
+                <p class="card-text mt-1 mb-0 card_para_3">140-60 Beech Ave Flushing, NY 11355</p>
+                <p class="card-text mt-1 card_para_3 fw-bolder text-secondary"><i
+                        class="fa-solid fa-money-bills me-2 mt-3"></i>$65,000</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="head2 d-flex px-xl-5 mx-xl-5 mx-5 my-5">Added Today
+        <button type="button" class="btn but3 me-4 but2 btn-light px-4 ms-5 border rounded-fill">Apartments</button>
+        <button type="button" class="btn but2 me-4 btn-light px-4 border rounded-fill">Houses</button>
+        <button type="button" class="btn but2 me-4 btn-light px-4 border rounded-fill">Rooms</button>
+        <button type="button" class="btn but2 me-4 btn-light px-4 border rounded-fill">Commercial</button>
+    </div>
+
+    <!-- Card_3 -->
+    <div class="card-deck d-xl-flex card_main_div mx-xl-5 px-xl-5">
+        <div class="m-md-4">
+            <img class="card-img-top w-100 h-100" src="01 (1).webp" alt="Card image cap">
+        </div>
+        <div>
+            <div class="m-md-4">
+                <img class="card-img-top w-100 mt-4 mt-xl-0 mt-md-0" src="02 (1).webp" alt="Card image cap">
+            </div>
+
+            <div class="m-md-4">
+                <img class="card-img-top w-100 mt-4 mt-xl-4" src="03 (1).webp" alt="Card image cap">
+            </div>
+        </div>
+    </div>
+
+    <!-- calculateer -->
+    <div class="row mt-md-5 mt-4 pt-4 mb-5 font_none justify-content-center w-100 flex_div">
+        <div class="col-md-6 col-xl-5"><img src="calculator.svg" alt="" class="w-75 w-md-100 ms-5 img5"></div>
+        <div class="col-md-6 col-xl-6 head mt-4 ms-2 ms-xl-0 ms-md-0">
+            <h1 class="display-6 mt-md-1 mt-xl-5 fw-bolder head5">Calculate the cost of your property</h1>
+            <p class="para5 mt-4 fw-400">Real estate appraisal is a procedure that allows you to determine the average
+                market value of real estate (apartment, house, land, etc.). Calculate the cost of your property with our
+                new Calculation Service.</p>
+            <button type="button" class="btn but4 p-2 text-center mt-xl-4"><i
+                    class="fa-solid fa-calculator me-3"></i>Calculate</button>
+        </div>
+    </div>
+
+    <!-- Card-5 -->
+    <div class="head2 px-xl-5 mx-xl-5 mx-5 pt-4">Search property by city</div>
+    <div class="card-deck card_2_main_div px-xl-5 mx-xl-4">
+        <div class="card card_2 w--xl-50 m-md-4 mt-4 mx-3">
+            <img class="card-img-top" src="new-york.webp" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title mb-0 card_head_2 text-center">New York</h5>
+            </div>
+        </div>
+        <div class="card card_2 w-xl-50 m-md-4 mt-5 mx-3">
+            <img class="card-img-top" src="chicago.webp" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title mb-0 card_head_2 text-center">Chicago</h5>
+            </div>
+        </div>
+        <div class="card card_2 w-xl-50 m-md-4 mt-5 mx-3">
+            <img class="card-img-top" src="los-angeles.webp" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title mb-0 card_head_2 text-center">Los Angeles</h5>
+            </div>
+        </div>
+
+        <div class="card card_2 w-xl-50 m-md-4 mt-5 mx-3">
+            <img class="card-img-top" src="san-diego.webp" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title mb-0 card_head_2 text-center">San Diego</h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- company logo -->
+    <div class="container p-0 w-100 mt-5">
+        <div class="row row-cols-2 row-cols-sm-3 text-center row-cols-md-3 row-cols-xl-6 mx-4">
+            <div class="col div_hover my-3 my-md-4 my-xl-5 my-sm-4 border-none p-0 logo_filter"><img src="01_color.svg"
+                    alt="">
+            </div>
+            <div class="col div_hover my-3 my-md-4 my-xl-5 my-sm-4 border-none p-0 logo_filter"><img src="02_color.svg"
+                    alt="">
+            </div>
+            <div class="col div_hover my-3 my-md-4 my-xl-5 my-sm-4 border-none p-0 logo_filter"><img src="03_color.svg"
+                    alt="">
+            </div>
+            <div class="col div_hover my-3 my-md-4 my-xl-5 my-sm-4 border-none p-0 logo_filter"><img src="04_color.svg"
+                    alt="">
+            </div>
+            <div class="col div_hover my-3 my-md-4 my-xl-5 my-sm-4 border-none p-0 logo_filter"><img src="05_color.svg"
+                    alt="">
+            </div>
+            <div class="col div_hover my-3 my-md-4 my-xl-5 my-sm-4 border-none p-0 logo_filter"><img src="06_color.svg"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <div class="me-5 ms-5 ps-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <div>
+                <i class="fa-brands fa-facebook-f me-4 footer_para"></i>
+                <i class="fab fa-twitter me-4 footer_para"></i>
+                <i class="fab fa-google me-4 footer_para"></i>
+                <i class="fab fa-instagram me-4 footer_para"></i>
+                <i class="fab fa-linkedin me-4 footer_para"></i>
+                <i class="fab fa-github me-4 footer_para"></i>
+            </div>
+        </section>
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <img src="logo-dark.svg" alt="" class="w-50">
+                        </h6>
+                        <p>
+                            Amet libero morbi venenatis ut est. Iaculis leo ultricies nunc id ante adipiscing. Vel metus
+                            odio at faucibus ac. Neque id placerat et id ut. Scelerisque eu mi ullamcorper sit urna. Est
+                            volutpat dignissim elementum nec. footer_para
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Quick Links</h6>
+                        <p class="footer_para">Buy a property</p>
+                        <p class="footer_para">Sell a property</p>
+                        <p class="footer_para">Rent a property</p>
+                        <p class="footer_para">Calculate your property</p>
+                        <p class="footer_para">Top offers</p>
+                        <p class="footer_para">Top cities</p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">About</h6>
+                        <p class="footer_para">About us</p>
+                        <p class="footer_para">Our agents</p>
+                        <p class="footer_para">Contacts</p>
+                        <p class="footer_para">News</p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p class="footer_para"><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                        <p class="footer_para">
+                            <i class="fas fa-envelope me-3"></i>
+                            info@example.com
+                        </p>
+                        <p class="footer_para"><i class="fas fa-phone me-3"></i> + 91 82009 24053</p>
+                        <p class="footer_para"><i class="fas fa-print me-3"></i> + 91 82009 24053</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            Design By <span class="footer_design fw-bolder">Part Dungrani</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
